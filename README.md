@@ -60,6 +60,39 @@ export function activate(): void {
 }
 ```
 
+**Add an annotation after the end of a line**
+
+```typescript
+import * as sourcegraph from "sourcegraph";
+
+export function activate(): void {
+  sourcegraph.workspace.onDidOpenTextDocument.subscribe(doc => {
+    if (
+      sourcegraph.app.activeWindow &&
+      sourcegraph.app.activeWindow.visibleViewComponents.length > 0
+    ) {
+      sourcegraph.app.activeWindow.visibleViewComponents[0].setDecorations(
+        null,
+        [
+          {
+            range: new sourcegraph.Range(
+              new sourcegraph.Position(0, 0),
+              new sourcegraph.Position(0, 0)
+            ),
+            after: {
+              contentText: " View on npm (" + downloads + " DLs last week)",
+              linkURL: `https://www.npmjs.com/package/${pkg}`,
+              backgroundColor: "pink",
+              color: "black"
+            }
+          }
+        ]
+      );
+    }
+  });
+}
+```
+
 **Read/write settings**
 
 ```typescript
