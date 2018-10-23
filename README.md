@@ -1,118 +1,16 @@
-# Sourcegraph extension authoring docs
+# Sourcegraph extension authoring documentation
 
-New to Sourcegraph extensions? Check out the [Sourcegraph extension API](https://github.com/sourcegraph/sourcegraph-extension-api), the [Sourcegraph.com extension registry](https://sourcegraph.com/extensions), and [sample extensions](https://github.com/sourcegraph/sourcegraph-extension-samples).
+Sourcegraph extensions allow you to extend code hosts like GitHub in the same way that editor extensions allow you to extend editors. Once you write an extension, it runs anywhere you see code (e.g. GitHub).
 
-## Cookbook for writing Sourcegraph extensions
+When you publish your extension to the [Sourcegraph extension registry](https://sourcegraph.com/extensions), anyone can install and instantly start using it. (Sourcegraph Enterprise supports a [private extension registry](https://docs.sourcegraph.com/extensions)).
 
-**Hello world extension**
+Sourcegraph extensions are considered alpha and these docs are a work in progress.
 
-```typescript
-// Imports the Sourcegraph extension API
-import * as sourcegraph from "sourcegraph"
+ - [Creating an extension](docs/creating_an_extension.md)
+ - [Sample extensions](https://github.com/sourcegraph/sourcegraph-extension-samples).
+ - [Sourcegraph extension API](https://github.com/sourcegraph/sourcegraph-extension-api), the [Sourcegraph.com extension registry](https://sourcegraph.com/extensions)
+ - [Extensions cookbook](docs/cookbook.md)
 
-// Called by Sourcegraph when the extension is enabled by the user
-export function activate(): void {
-  // Shows a hello world message in a tooltip when the user hovers over code
-  sourcegraph.languages.registerHoverProvider(["*"], {
-    provideHover: () => ({ contents: { value: "Hello, world! 🎉🎉🎉" } })
-  })
-}
-```
+## Help and feedback
 
-**Get the text of the document**
-
-```typescript
-import * as sourcegraph from "sourcegraph"
-
-export function activate(): void {
-  sourcegraph.languages.registerHoverProvider(["*"], {
-    provideHover: doc => ({ contents: { value: "Document size: " + doc.text.length } })
-  })
-}
-```
-
-**Change line background colors**
-
-```typescript
-import * as sourcegraph from "sourcegraph";
-
-export function activate(): void {
-  sourcegraph.workspace.onDidOpenTextDocument.subscribe(doc => {
-    if (
-      sourcegraph.app.activeWindow &&
-      sourcegraph.app.activeWindow.visibleViewComponents.length > 0
-    ) {
-      sourcegraph.app.activeWindow.visibleViewComponents[0].setDecorations(
-        null,
-        [
-          {
-            // The top line (base 0)
-            range: new sourcegraph.Range(
-              new sourcegraph.Position(0, 0),
-              new sourcegraph.Position(0, 0)
-            ),
-            backgroundColor: "magenta"
-          }
-        ]
-      );
-    }
-  });
-}
-```
-
-**Add an annotation after the end of a line**
-
-```typescript
-import * as sourcegraph from "sourcegraph";
-
-export function activate(): void {
-  sourcegraph.workspace.onDidOpenTextDocument.subscribe(doc => {
-    if (
-      sourcegraph.app.activeWindow &&
-      sourcegraph.app.activeWindow.visibleViewComponents.length > 0
-    ) {
-      sourcegraph.app.activeWindow.visibleViewComponents[0].setDecorations(
-        null,
-        [
-          {
-            range: new sourcegraph.Range(
-              new sourcegraph.Position(0, 0),
-              new sourcegraph.Position(0, 0)
-            ),
-            after: {
-              contentText: " View on npm (" + downloads + " DLs last week)",
-              linkURL: `https://www.npmjs.com/package/${pkg}`,
-              backgroundColor: "pink",
-              color: "black"
-            }
-          }
-        ]
-      );
-    }
-  });
-}
-```
-
-**Read/write settings**
-
-```typescript
-import * as sourcegraph from "sourcegraph";
-
-export function activate(): void {
-  function afterActivate() {
-    const address = sourcegraph.configuration.get().get("graphql.langserver-address");
-    if (!address) {
-      console.log("No graphql.langserver-address was set, exiting.");
-      return;
-    }
-    // ...
-  }
-
-  // Error creating extension host: Error: Configuration is not yet available.
-  // `sourcegraph.configuration.get` is not usable until after the extension
-  // `activate` function is finished executing. This is a known issue and will
-  // be fixed before the beta release of Sourcegraph extensions. In the
-  // meantime, work around this limitation by deferring calls to `get`.
-  setTimeout(afterActivate, 0);
-}
-```
+Noticed an error or have a suggestion for improving these docs? [Submit an issue](https://github.com/sourcegraph/sourcegraph-extension-docs/issues) or a Pull request.
