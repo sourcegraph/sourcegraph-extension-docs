@@ -1,5 +1,5 @@
 ---
-description: How to setup your development environment for creating and publishing extensions.
+description: How to set up your development environment for creating and publishing Sourcegraph extensions.
 ---
 
 # Set up your Development environment
