@@ -6,7 +6,7 @@ description: Creating an extension using the Sourcegraph extension generator.
 
 Create an extension with no build configuration. 
 
-Once you have [set up your development environment](development_environment.md), you can use the [Sourcegraph extension generator](https://www.npmjs.com/package/@sourcegraph/create-extension) to setup your extension.
+Once you have [set up your development environment](development_environment.md), you can use the [Sourcegraph extension generator](https://www.npmjs.com/package/@sourcegraph/create-extension) to create the required extension files.
 
 Create a directory for your extension, then run the generator. 
 
