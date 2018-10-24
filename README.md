@@ -6,12 +6,13 @@ When you publish your extension to the [Sourcegraph extension registry](https://
 
 Sourcegraph extensions are considered alpha and these docs are a work in progress.
 
- - [Set up your Development environment](docs/development_environment.md)
+ - [Set up your development environment](docs/development_environment.md)
  - [Creating an extension](docs/creating_an_extension.md)
  - [Sample extensions](https://github.com/sourcegraph/sourcegraph-extension-samples)
  - [Sourcegraph extension API](https://github.com/sourcegraph/sourcegraph-extension-api), the [Sourcegraph.com extension registry](https://sourcegraph.com/extensions)
  - [Extensions cookbook](docs/cookbook.md)
+ - [Sourcegraph extension early adopters](docs/early_adopters.md)
 
 ## Help and feedback
 
-Noticed an error or have a suggestion for improving these docs? [Submit an issue](https://github.com/sourcegraph/sourcegraph-extension-docs/issues) or a Pull request.
+Noticed an error or have a suggestion for improving these docs? [Submit an issue](https://github.com/sourcegraph/sourcegraph-extension-docs/issues) or a pull request.
