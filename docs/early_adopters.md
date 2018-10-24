@@ -1,4 +1,4 @@
-# Sourcegraph extension developers
+# Sourcegraph extension early adopters
 
 We love that the community is building Sourcegraph extensions (while we're still in alpha), and want to highlight the functioning extensions we've seen.
 
