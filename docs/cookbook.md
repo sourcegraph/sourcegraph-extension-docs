@@ -1,6 +1,6 @@
-## Cookbook for writing Sourcegraph extensions
+# Cookbook for writing Sourcegraph extensions
 
-**Hello world extension**
+## Provide hover
 
 ```typescript
 // Imports the Sourcegraph extension API
@@ -15,7 +15,7 @@ export function activate(): void {
 }
 ```
 
-**Get the text of the document**
+## Get the current document text
 
 ```typescript
 import * as sourcegraph from "sourcegraph"
@@ -27,7 +27,7 @@ export function activate(): void {
 }
 ```
 
-**Change line background colors**
+## Change line background colors
 
 ```typescript
 import * as sourcegraph from "sourcegraph";
@@ -56,7 +56,7 @@ export function activate(): void {
 }
 ```
 
-**Add an annotation after the end of a line**
+## Add an annotation after the end of a line
 
 ```typescript
 import * as sourcegraph from "sourcegraph";

@@ -12,6 +12,7 @@ Sourcegraph extensions are considered alpha and these docs are a work in progres
  - [Sourcegraph extension API](https://github.com/sourcegraph/sourcegraph-extension-api), the [Sourcegraph.com extension registry](https://sourcegraph.com/extensions)
  - [Extensions cookbook](docs/cookbook.md)
  - [Sourcegraph extension early adopters](docs/early_adopters.md)
+ - [Extension publishing](docs/extension_publishing.md)
 
 ## Help and feedback
 

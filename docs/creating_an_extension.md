@@ -12,30 +12,30 @@ Once you have [set up your development environment](development_environment.md),
 mkdir my-extension
 cd my-extension
 npm init @sourcegraph/extension
-``` 
+```
 
 ## Created files
 
 Your extension folder now contains the following.
 
-```
+```shell
 ├── README.md
 ├── node_modules
 ├── package-lock.json
 ├── package.json
 ├── src
-│   └── extension.ts
+│   └── {extension-name}.ts
 ├── tsconfig.json
 └── tslint.json
 ```
 
 The `README.md` explains how to set up and use your extension.
 
-The entry point for your extension code is `src/extension.ts`.
+The entry point for your extension code is `src/{extension-name}.ts`.
 
 The `package.json` defines important commands used during development and publishing. To run them, prefix the command key with `npm run`. For example, to lint and type check your code:
 
-```
+```shell
 npm run lint
 npm run typecheck
 ```
