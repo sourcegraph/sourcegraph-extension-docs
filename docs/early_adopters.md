@@ -6,7 +6,7 @@ We love that the community is building Sourcegraph extensions (while we're still
 Find references to a string literal.
 
 **[Sourcegraph godocs](https://github.com/prestonvanloon/sourcegraph-godocs)**  
-Adds a link for a godocs package.
+Adds godoc links for Go package.
 
 Want your extension added to the list? Submit a pull request.
 
@@ -23,7 +23,7 @@ Bring code intelligence to your GraphQL source.
 **[Sourcegraph code discussions](https://github.com/sourcegraph/sourcegraph-code-discussions)**  
 Discuss code contextually, review code continuously.
 
-**[Token Highlights](https://github.com/sourcegraph/sourcegraph-token-highlights)**  
+**[Token highlights](https://github.com/sourcegraph/sourcegraph-token-highlights)**  
 Highlights lines that match the currently hovered token.
 
 **[npm import stats](https://github.com/sourcegraph/sourcegraph-extension-samples/tree/master/npm-import-stats)**  
