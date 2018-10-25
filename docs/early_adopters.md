@@ -1,18 +1,14 @@
 # Sourcegraph extension early adopters
 
-We love that the community is building Sourcegraph extensions (while we're still in alpha), and want to highlight the functioning extensions we've seen.
+We love that the community is building Sourcegraph extensions while we're still in alpha.
+
+Submit a pull request to have your extension added to the list.
 
 **[Sourcegraph string references](https://github.com/lguychard/sourcegraph-string-references)**  
 Find references to a string literal.
 
 **[Sourcegraph godocs](https://github.com/prestonvanloon/sourcegraph-godocs)**  
 Adds godoc links for Go package.
-
-Want your extension added to the list? Submit a pull request.
-
-## From Sourcegraph
-
-Non-language server extensions from your friends at Sourcegraph.
 
 **[Codecov](https://github.com/sourcegraph/sourcegraph-codecov)**  
 See code coverage information from Codecov on GitHub, Sourcegraph, and other tools.
