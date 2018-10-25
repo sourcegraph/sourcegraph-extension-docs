@@ -2,6 +2,10 @@
 
 Sourcegraph extensions allow you to extend code hosts like GitHub in the same way that editor extensions allow you to extend editors. Once you write an extension, it runs anywhere you see code (e.g. GitHub).
 
+For example, the [Codecov extension](https://github.com/sourcegraph/sourcegraph-codecov) shows coverage information from Codecov on GitHub and Sourcegraph.
+
+![Codecov Sourcegraph extension which shows coverage information from Codecov on GitHub and Sourcegraph.com](https://images.ctfassets.net/le3mxztn6yoo/3WZ3oy1haU4YeYWywuS0Qe/a25491260dd59fb4028e6bcea6c4c88a/CodeCovExtension.gif)
+
 When you publish your extension to the [Sourcegraph extension registry](https://sourcegraph.com/extensions), anyone can install and instantly start using it. (Sourcegraph Enterprise supports a [private extension registry](https://docs.sourcegraph.com/extensions)).
 
 Sourcegraph extensions are considered alpha and these docs are a work in progress.
