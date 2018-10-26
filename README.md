@@ -12,6 +12,7 @@ Sourcegraph extensions are considered alpha and these docs are a work in progres
 
  - [Set up your development environment](docs/development_environment.md)
  - [Creating an extension](docs/creating_an_extension.md)
+ - [Debugging](docs/debugging.md)
  - [Sample extensions](https://github.com/sourcegraph/sourcegraph-extension-samples)
  - [Sourcegraph extension API](https://github.com/sourcegraph/sourcegraph-extension-api), the [Sourcegraph.com extension registry](https://sourcegraph.com/extensions)
  - [Extensions cookbook](docs/cookbook.md)
