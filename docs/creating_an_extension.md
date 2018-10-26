@@ -6,7 +6,7 @@ description: Creating an extension using the Sourcegraph extension creator.
 
 Creating an extension is easy thanks to the [Sourcegraph extension creator](https://github.com/sourcegraph/create-extension). It will ask you a series of questions about your extension, then create the file structure so you can start developing your extension immediately.
 
-Once you have [set up your development environment](development_environment.md), you're ready to go: 
+Once you have [set up your development environment](development_environment.md), you're ready to go:
 
 ```shell
 mkdir my-extension
