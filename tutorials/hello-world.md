@@ -1,4 +1,4 @@
-# Example: Building a "Hello, world!" Sourcegraph Extension
+# Building a "Hello, world!" Sourcegraph extension
 
 [Sourcegraph extensions](https://github.com/sourcegraph/sourcegraph-extension-api) let you add  features and show new kinds of information alongside your code on Sourcegraph.com, GitHub, and other code hosts.
 
@@ -27,7 +27,7 @@ The code for the extension is in the `src` directory. That's all it takes to cre
 
 Now let's publish it so you (and other people) can use it.
 
-## Publishing the Extension
+## Publishing the extension
 
 Publishing an extension requires an [account on Sourcegraph.com](https://sourcegraph.com/sign-up) and configuring [`src`](https://github.com/sourcegraph/src-cli) with an [access token](https://github.com/sourcegraph/src-cli#authentication) which is covered in [setting up your development environment](../docs/development_environment.md).
 
@@ -39,7 +39,7 @@ src ext publish
 
 Now that the extension is published, let's use it.
 
-## Use the Extension
+## Use the extension
 
 After publishing the extension, visit the URL output in the terminal. This is the extension's listing page on the [Sourcegraph.com extension registry](https://sourcegraph.com/extensions). Anyone can visit this page to see more information about the extension and to start using it.
 
@@ -50,7 +50,7 @@ Now you can:
 - Visit any code file on Sourcegraph (such as [this file](https://sourcegraph.com/github.com/ReactiveX/rxjs/-/blob/src/internal/observable/SubscribeOnObservable.ts)) and hover over code to see the "Hello, world! 🎉🎉🎉" message.
 - Visit any code file on GitHub (such as [this file](https://github.com/ReactiveX/rxjs/blob/HEAD/src/internal/observable/SubscribeOnObservable.ts)) and hover over code to see it say the same.
 
-## Next Steps
+## Next steps
 
 You've created your first Sourcegraph extension!
 
