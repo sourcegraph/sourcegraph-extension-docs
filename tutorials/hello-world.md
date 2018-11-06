@@ -1,6 +1,6 @@
 # Building a "Hello, world!" Sourcegraph extension
 
-[Sourcegraph extensions](https://github.com/sourcegraph/sourcegraph-extension-api) let you add  features and show new kinds of information alongside your code on Sourcegraph.com, GitHub, and other code hosts.
+[Sourcegraph extensions](https://docs.sourcegraph.com/extensions) let you add  features and show new kinds of information alongside your code on Sourcegraph.com, GitHub, and other code hosts.
 
 This guide shows you how to create a simple Sourcegraph extension that:
 
